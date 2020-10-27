@@ -104,6 +104,7 @@ func runSetup(yk *piv.YubiKey) {
 		log.Fatal(err)
 	}
 	if err := yk.SetManagementKey(piv.DefaultManagementKey, key); err != nil {
+		fmt.Println(err)
 		log.Println("‼️  The default Management Key did not work")
 		log.Println("")
 		log.Println("If you know what you're doing, reset PIN, PUK, and")
